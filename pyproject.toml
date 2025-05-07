@@ -1,0 +1,23 @@
+[project]
+name = "mcp_giga_checker"
+version = "0.1.0"
+description = "MCP сервер для проверки текста на сгенерированность ИИ через GigaChat API"
+requires-python = ">=3.12"
+authors = [
+    { name = "Your Name", email = "your@email.com" }
+]
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+    "uv>=0.7.2"
+]
+
+[project.scripts]
+mcp-giga-checker = "mcp_giga_checker.server:run"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["mcp_giga_checker"] 
